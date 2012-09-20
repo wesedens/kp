@@ -1,0 +1,27 @@
+
+**** Build of configuration Debug for project cb0c ****
+
+make all 
+Building file: ../src/main.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:53:2: warning: pointer targets in passing argument 1 of ‘fgets’ differ in signedness [-Wpointer-sign]
+/usr/include/stdio.h:624:14: note: expected ‘char * __restrict__’ but argument is of type ‘unsigned char *’
+../src/main.c:60:1: warning: control reaches end of non-void function [-Wreturn-type]
+Finished building: ../src/main.c
+ 
+Building target: cb0c
+Invoking: GCC C Linker
+gcc  -o "cb0c"  ./src/decrypt.o ./src/main.o   
+Finished building target: cb0c
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project cb0c ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****

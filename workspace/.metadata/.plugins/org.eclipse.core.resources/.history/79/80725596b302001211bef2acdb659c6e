@@ -1,0 +1,9 @@
+package com.wedens.codes.cb0;
+
+public class Decrypt {
+	
+	public static String breakCode(String c)
+	{	
+		return null;
+	}
+}

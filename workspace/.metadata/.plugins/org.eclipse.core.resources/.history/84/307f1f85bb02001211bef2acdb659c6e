@@ -1,0 +1,10 @@
+package com.wedens.codes.cb0;
+
+public class Decrypt {
+	
+	public static String breakCode(String c)
+	{
+		System.out.println(c);
+		return null;
+	}
+}

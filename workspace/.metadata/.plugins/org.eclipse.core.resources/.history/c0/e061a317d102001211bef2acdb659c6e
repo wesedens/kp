@@ -1,0 +1,33 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 19, 2012
+ *      Author: wedens2
+ */
+
+
+#include <stdio.h>
+#include <errno.h>
+#include <sys/stat.h>
+
+int exists(const char *filename)
+{
+	struct stat st;
+	return stat(filename, &st);
+}
+
+
+int main(int argc, char *argv[])
+{
+	if ( argc < 1 ){
+		printf("usage: cb0c <filename>\n");
+		return 0;
+	}
+
+	if ( 0 != exists(argv[0]))
+	{
+		perror("File does not exist");
+		return 0;
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.wedens.codes.cb0;
+
+public class Decrypt {
+	
+	public static String breakCode(String c)
+	{
+		String[] blocks = Decrypt.split(c, 8);
+		
+		for(String s : blocks){
+			System.out.println(s);
+		}
+		return null;
+	}
+	
+	private static String[] split(String s, int size)
+	{
+		int      numBlocks = s.length()/size;
+		String[] blocks    = new String[numBlocks];
+		int      blockCnt  = 0;
+		int      cnt       = 0;
+		
+		while(blockCnt+size < s.length()){
+			blocks[cnt++] = s.substring(blockCnt, blockCnt+size);
+			blockCnt += size;
+		}
+		return blocks;
+	}
+}
