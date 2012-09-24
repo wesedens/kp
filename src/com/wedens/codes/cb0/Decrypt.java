@@ -10,7 +10,7 @@ public class Decrypt {
 		//tryRotate(str,  8);
 		//tryRotate(str, 16);
 		
-		tryInts(str,  8);
+		tryInts(str,  5);
 //		tryInts(str, 16);
 		return null;
 	}
@@ -61,6 +61,7 @@ public class Decrypt {
 	private static void printi(String[] blocks, int rotate)
 	{
 		for(String s : blocks){
+			System.out.printf("%s ", s);
 			int ch = Integer.parseInt(s,2);
 			System.out.printf("%d ",ch+rotate);
 		}
