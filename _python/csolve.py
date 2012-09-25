@@ -29,7 +29,7 @@ def solve(data, lfreq, didx):
     for i in range(len(didx)):
         d = replaceChar(d, slist[i], lfreq[didx[i]])
     writeToFile(d, 'dump')
-    return
+    return d
 
 def replaceChar(data, num2replace, chr):
     for i in range(len(data)):
@@ -38,20 +38,20 @@ def replaceChar(data, num2replace, chr):
     return data
  
 
-def writeToFile(s, filename, title=""):
+def writeToFile(s, filename, title="", delimiter=""):
     with open(filename, 'w') as f:
         f.write(title)
         for i in s[:]:
             f.write(str(i))
-            f.write(" ")
+            f.write(delimiter)
         f.write("\n\n")
 
-def appendToFile(s, filename, title=""):
+def appendToFile(s, filename, title="", delimiter=""):
     with open(filename, 'a') as f:
         f.write(title)
         for i in s[:]:
             f.write(str(i))
-            f.write(" ")
+            f.write(delimiter)
         f.write("\n\n")
     #f.closed
     
