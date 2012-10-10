@@ -4,6 +4,18 @@ split binary string into blocks of n
 import math
 from IPython.Debugger import Tracer; debug_here = Tracer()
 
+def split2(codestr):
+    cmd = codestr.split()
+    for i in range(len(cmd)):
+        cmd[i] = cmd[i].replace(".","")
+    return cmd
+
+def getSizes(codelist):
+    slist = []
+    for s in codelist[:]:
+        slist.append(len(s))
+    return slist
+
 def split(codestr, blockSize):
     numBlocks = float(len(codestr))/blockSize
     bidx      = 0
