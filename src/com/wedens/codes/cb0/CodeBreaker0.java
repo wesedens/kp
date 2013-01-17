@@ -13,35 +13,37 @@ public class CodeBreaker0 {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static int main(String[] args) {
 
 		BufferedReader inputStream = null;
 		String         filename    = null;
 
-		if (args.length < 1) {
-			System.out.printf("usage: cb0 <filename>\n");
-		}
+		System.out.println("hello world");
+//		if (args.length < 1) {
+//			System.out.printf("usage: cb0 <filename>\n");
+//		}
 
-		try {
-			filename    = args[0];
-			inputStream = Util.getBufReader(filename);
-			String l;
-			StringBuilder code = new StringBuilder();
-			while ((l = inputStream.readLine()) != null) {
-				code.append(l);
-				Decrypt.breakCode(code.toString());
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.out.printf("IOException: %s\n", filename);
-		} finally {
-			if (inputStream != null) {
-				try {
-					inputStream.close();
-				} catch (IOException e) {
-					inputStream = null;
-				}
-			}
-		}
+//		try {
+//			filename    = args[0];
+//			inputStream = Util.getBufReader(filename);
+//			String l;
+//			StringBuilder code = new StringBuilder();
+//			while ((l = inputStream.readLine()) != null) {
+//				code.append(l);
+//				Decrypt.breakCode(code.toString());
+//			}
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//			System.out.printf("IOException: %s\n", filename);
+//		} finally {
+//			if (inputStream != null) {
+//				try {
+//					inputStream.close();
+//				} catch (IOException e) {
+//					inputStream = null;
+//				}
+//			}
+//		}
+		return 0;
 	}
 }
